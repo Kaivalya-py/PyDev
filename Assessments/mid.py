@@ -14,11 +14,10 @@ def search_movies(movies, query):
             results.append(movie)
     return results
 
-# Main function to input movies and perform search
+
 def main():
     movies = []
     
-    # Input movies until "STOP" is entered
     while True:
         movie_info = input()
         if movie_info == "STOP":
@@ -28,11 +27,11 @@ def main():
             movie = Movie(movie_id, title, director, year)
             movies.append(movie)
     
-    # Perform search
+
     query = input()
     results = search_movies(movies, query)
     
-    # Print results
+
     for movie in results:
         print(f"{movie.movie_id};{movie.title};{movie.director};{movie.year}")
 
